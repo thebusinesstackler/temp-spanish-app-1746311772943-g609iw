@@ -1,0 +1,160 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 173 50% 40%; /* Teal primary color */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 38 96% 70%; /* Sunny yellow */
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 25 90% 55%; /* Bright orange */
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 173 50% 40%; /* Match primary teal */
+
+    --radius: 0.75rem; /* Slightly increased for a friendlier look */
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 173 50% 40%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 38 96% 70%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 25 90% 55%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 173 50% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  .flashcard {
+    perspective: 1000px;
+  }
+
+  .flashcard-inner {
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 0.5rem;
+  }
+
+  .flashcard.flipped .flashcard-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flashcard-front, .flashcard-back {
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+  }
+
+  .flashcard-back {
+    transform: rotateY(180deg);
+  }
+  
+  .card-success-glow {
+    animation: success-pulse 1.5s infinite;
+    box-shadow: 0 0 15px rgba(32, 178, 170, 0.7);
+  }
+  
+  .card-error-glow {
+    animation: error-pulse 1.5s infinite;
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.7);
+  }
+  
+  @keyframes success-pulse {
+    0% { box-shadow: 0 0 5px rgba(32, 178, 170, 0.7); }
+    50% { box-shadow: 0 0 20px rgba(32, 178, 170, 0.9); }
+    100% { box-shadow: 0 0 5px rgba(32, 178, 170, 0.7); }
+  }
+  
+  @keyframes error-pulse {
+    0% { box-shadow: 0 0 5px rgba(239, 68, 68, 0.7); }
+    50% { box-shadow: 0 0 20px rgba(239, 68, 68, 0.9); }
+    100% { box-shadow: 0 0 5px rgba(239, 68, 68, 0.7); }
+  }
+
+  /* New path design classes */
+  .learning-path-item {
+    @apply relative p-5 rounded-xl transition-all duration-300;
+  }
+  
+  .learning-path-item.completed {
+    @apply bg-spanish-lightTeal text-gray-800;
+  }
+  
+  .learning-path-item.current {
+    @apply bg-spanish-teal text-white shadow-lg scale-105;
+  }
+  
+  .learning-path-item.locked {
+    @apply bg-gray-100 text-gray-400;
+  }
+
+  .path-connector {
+    @apply absolute h-12 w-1.5 bg-gray-200;
+  }
+  
+  .path-connector.completed {
+    @apply bg-spanish-teal;
+  }
+}
