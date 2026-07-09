@@ -345,7 +345,6 @@ export const flashcards: Flashcard[] = [
     difficulty: 'beginner',
     exampleSentence: 'El delfín es muy inteligente.'
   },
-  
   {
     id: 'family-1',
     english: 'Mother',
@@ -362,7 +361,7 @@ export const flashcards: Flashcard[] = [
     difficulty: 'beginner',
     exampleSentence: 'Mi padre trabaja mucho.'
   },
-   {
+  {
     id: 'family-3',
     english: 'Sister',
     spanish: 'Hermana',
@@ -442,7 +441,7 @@ export const flashcards: Flashcard[] = [
     difficulty: 'beginner',
     exampleSentence: 'Me gusta jugar en el parque.'
   },
-   {
+  {
     id: 'clothing-1',
     english: 'Shirt',
     spanish: 'Camisa',
@@ -469,100 +468,100 @@ export const flashcards: Flashcard[] = [
 ];
 
 export const categories = [
-  { 
-    id: 'greetings', 
-    name: 'Greetings', 
-    icon: '👋', 
+  {
+    id: 'greetings',
+    name: 'Greetings',
+    icon: '👋',
     color: 'bg-spanish-teal',
     gradient: {
       from: '#20B2AA',
       to: '#8FDFD8'
     }
   },
-  { 
-    id: 'food', 
-    name: 'Food & Drinks', 
-    icon: '🍽️', 
+  {
+    id: 'food',
+    name: 'Food & Drinks',
+    icon: '🍽️',
     color: 'bg-spanish-orange',
     gradient: {
       from: '#FF8C42',
       to: '#FFAC71'
     }
   },
-  { 
-    id: 'numbers', 
-    name: 'Numbers', 
-    icon: '🔢', 
+  {
+    id: 'numbers',
+    name: 'Numbers',
+    icon: '🔢',
     color: 'bg-spanish-yellow',
     gradient: {
       from: '#F9C74F',
       to: '#FFEAA0'
     }
   },
-  { 
-    id: 'colors', 
-    name: 'Colors', 
-    icon: '🎨', 
+  {
+    id: 'colors',
+    name: 'Colors',
+    icon: '🎨',
     color: 'bg-spanish-purple',
     gradient: {
       from: '#7B68EE',
       to: '#A594F9'
     }
   },
-  { 
-    id: 'animals', 
-    name: 'Animals', 
-    icon: '🐕', 
+  {
+    id: 'animals',
+    name: 'Animals',
+    icon: '🐕',
     color: 'bg-spanish-red',
     gradient: {
       from: '#E63946',
       to: '#FF6F7C'
     }
   },
-  { 
-    id: 'family', 
-    name: 'Family', 
-    icon: '👪', 
+  {
+    id: 'family',
+    name: 'Family',
+    icon: '👨‍👩‍👧‍👦',
     color: 'bg-green-600',
     gradient: {
       from: '#43AA8B',
       to: '#8ED1BD'
     }
   },
-  { 
-    id: 'time', 
-    name: 'Time', 
-    icon: '⏰', 
+  {
+    id: 'time',
+    name: 'Time',
+    icon: '⏰',
     color: 'bg-blue-600',
     gradient: {
       from: '#4361EE',
       to: '#7DA0FA'
     }
   },
-  { 
-    id: 'weather', 
-    name: 'Weather', 
-    icon: '☀️', 
+  {
+    id: 'weather',
+    name: 'Weather',
+    icon: '☀️',
     color: 'bg-yellow-500',
     gradient: {
       from: '#FFD166',
       to: '#FFE9AD'
     }
   },
-  { 
-    id: 'places', 
-    name: 'Places', 
-    icon: '🏙️', 
+  {
+    id: 'places',
+    name: 'Places',
+    icon: '🏙️',
     color: 'bg-indigo-600',
     gradient: {
       from: '#5E60CE',
       to: '#9D9FE4'
     }
   },
-  { 
-    id: 'clothing', 
-    name: 'Clothing', 
-    icon: '👕', 
+  {
+    id: 'clothing',
+    name: 'Clothing',
+    icon: '👕',
     color: 'bg-pink-500',
     gradient: {
       from: '#FF5D8F',
